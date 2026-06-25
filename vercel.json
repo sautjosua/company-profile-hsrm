@@ -12,9 +12,6 @@
             "dest": "/api/index.php"
         }
     ],
-    "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "false",
-        "APP_KEY": "base64:MVO5fwjnTCRApj4EKyIAkW1YcmI89cxXxTMCnVOtgrs="
-    }
+    "outputDirectory": "public",
+    "buildCommand": ""
 }
