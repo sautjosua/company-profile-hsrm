@@ -4,55 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'HSRM Official')</title>
-    <link rel="stylesheet" href="{{ asset('bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <style>
         :root {
-    --navy: #001B44;
-    --gold: #C5A059;
-    --gold-light: #d4b578;
-    --gray: #707070;
-}
-        body {
-            background-color: #f8f9fa;
+            --navy: #001B44;
+            --gold: #C5A059;
+            --gold-light: #d4b578;
+            --gray: #707070;
         }
-        .navbar-custom {
-            background-color: var(--navy);
-        }
-        .navbar-custom .navbar-brand {
-            color: var(--gold) !important;
-            font-weight: 800;
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-        }
-        .navbar-custom .nav-link {
-            color: #fff !important;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-        .navbar-custom .nav-link:hover {
-            color: var(--gold) !important;
-        }
-        .navbar-custom .nav-link.active {
-            color: var(--gold) !important;
-        }
-        footer {
-            background-color: var(--navy);
-            color: #fff;
-        }
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-        .btn-gold {
-            background-color: var(--gold);
-            color: var(--navy);
-            font-weight: 700;
-            border: none;
-        }
-        .btn-gold:hover {
-            background-color: var(--gold-light);
-            color: var(--navy);
-        }
+        body { background-color: #f8f9fa; }
+        .navbar-custom { background-color: var(--navy); }
+        .navbar-custom .navbar-brand { color: var(--gold) !important; font-weight: 800; font-size: 1.5rem; letter-spacing: 2px; }
+        .navbar-custom .nav-link { color: #fff !important; font-weight: 500; letter-spacing: 1px; }
+        .navbar-custom .nav-link:hover { color: var(--gold) !important; }
+        .navbar-custom .nav-link.active { color: var(--gold) !important; }
+        footer { background-color: var(--navy); color: #fff; }
+        footer a { color: var(--gold); text-decoration: none; }
+        .btn-gold { background-color: var(--gold); color: var(--navy); font-weight: 700; border: none; }
+        .btn-gold:hover { background-color: var(--gold-light); color: var(--navy); }
     </style>
 </head>
 <body>
@@ -64,31 +33,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
-        <a href="{{ route('home') }}" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ route('products') }}" class="nav-link">Products</a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ route('articles') }}" class="nav-link">Articles</a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ route('about') }}" class="nav-link">About</a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ route('contact') }}" class="nav-link">Contact</a>
-    </li>
-    @if (session('admin_id'))
-        <li class="nav-item">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link" style="color: var(--gold) !important;">⚙️ Admin</a>
-        </li>
-    @else
-        <li class="nav-item">
-            <a href="{{ route('admin.login') }}" class="nav-link" style="color: var(--gold) !important;">🔑 Login</a>
-        </li>
-    @endif
-</ul>
+                    <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{{ route('products') }}" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="{{ route('articles') }}" class="nav-link">Articles</a></li>
+                    <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+                    @if (session('admin_id'))
+                        <li class="nav-item"><a href="{{ route('admin.dashboard') }}" class="nav-link" style="color: var(--gold) !important;">⚙️ Admin</a></li>
+                    @else
+                        <li class="nav-item"><a href="{{ route('admin.login') }}" class="nav-link" style="color: var(--gold) !important;">🔑 Login</a></li>
+                    @endif
+                </ul>
             </div>
         </div>
     </nav>
@@ -105,6 +60,6 @@
         </div>
     </footer>
 
-    <script src="{{ asset('bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

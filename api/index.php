@@ -1,13 +1,19 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+ini_set('display_errors', '0');
+error_reporting(E_ALL);
 
-$app = require_once __DIR__ . '/../bootstrap/app.php';
+$uri = urldecode(
+    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '/'
+);
 
-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+// Serve static files langsung
+if ($uri !== '/' && file_exists(__DIR__ . '/../public' . $uri)) {
+    return false;
+}
 
-$response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
-)->send();
+$_SERVER['SCRIPT_FILENAME'] = __DIR__ . '/../public/index.php';
+$_SERVER['SCRIPT_NAME'] = '/index.php';
+$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'] ?? 'localhost';
 
-$kernel->terminate($request, $response);
+require __DIR__ . '/../public/index.php';

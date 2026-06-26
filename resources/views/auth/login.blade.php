@@ -4,49 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin - HSRM</title>
-    <link rel="stylesheet" href="{{ asset('bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <style>
-        :root {
-            --navy: #001B44;
-            --gold: #C5A059;
-            --gold-light: #d4b578;
-        }
-        body {
-            background: linear-gradient(135deg, #0a1628, #1a2d4a);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-        .login-card {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,.35);
-        }
-        .login-side {
-            background-color: var(--navy);
-            color: #fff;
-            padding: 50px 35px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-        }
-        .login-side h2 {
-            color: var(--gold);
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
-        .btn-gold {
-            background-color: var(--gold);
-            color: var(--navy);
-            font-weight: 700;
-            border: none;
-        }
-        .btn-gold:hover {
-            background-color: var(--gold-light);
-            color: var(--navy);
-        }
+        :root { --navy: #001B44; --gold: #C5A059; --gold-light: #d4b578; }
+        body { background: linear-gradient(135deg, #0a1628, #1a2d4a); min-height: 100vh; display: flex; align-items: center; }
+        .login-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+        .login-side { background-color: var(--navy); color: #fff; padding: 50px 35px; display: flex; flex-direction: column; justify-content: center; height: 100%; }
+        .login-side h2 { color: var(--gold); font-weight: 800; letter-spacing: 2px; }
+        .btn-gold { background-color: var(--gold); color: var(--navy); font-weight: 700; border: none; }
+        .btn-gold:hover { background-color: var(--gold-light); color: var(--navy); }
     </style>
 </head>
 <body>
@@ -101,6 +67,6 @@
             </div>
         </div>
     </div>
-    <script src="{{ asset('bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

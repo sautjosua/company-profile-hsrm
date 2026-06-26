@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Admin Panel') - HSRM</title>
-    <link rel="stylesheet" href="{{ asset('bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <style>
         :root { --navy: #001B44; --gold: #C5A059; --gold-light: #d4b578; }
         body { background-color: #f4f5f7; }
@@ -20,7 +20,6 @@
     </style>
 </head>
 <body>
-
     <div class="sidebar py-4">
         <div class="text-center mb-4"><span class="brand">HSRM Admin</span></div>
         <nav>
@@ -81,6 +80,6 @@
         @yield('content')
     </div>
 
-    <script src="{{ asset('bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
