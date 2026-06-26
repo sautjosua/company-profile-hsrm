@@ -1,18 +1,13 @@
 <?php
 
-ini_set('display_errors', '0');
-error_reporting(E_ALL);
+require __DIR__ . '/../vendor/autoload.php';
 
-$uri = urldecode(
-    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '/'
-);
+$app = require_once __DIR__ . '/../bootstrap/app.php';
 
-if ($uri !== '/' && file_exists(__DIR__ . '/../public' . $uri)) {
-    return false;
-}
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
-$_SERVER['SCRIPT_FILENAME'] = __DIR__ . '/../public/index.php';
-$_SERVER['SCRIPT_NAME'] = '/index.php';
-$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'] ?? 'localhost';
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+)->send();
 
-require __DIR__ . '/../public/index.php';
+$kernel->terminate($request, $response);
